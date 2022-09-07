@@ -1,0 +1,18 @@
+﻿/* Place Your Custom Styles Here */
+
+/* work-sans-regular - latin */
+
+html{
+    
+}
+
+body{
+    font-family: 'Open Sans';
+}
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Work Sans';
+  font-weight: 800;
+}
