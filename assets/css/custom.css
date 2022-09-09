@@ -1,5 +1,16 @@
 ﻿/* Place Your Custom Styles Here */
+:root {
+  --b3-turquoise: #0CCCCC;
+  --b3-yellow: #F7DF04;
+  --b3-pink: #FF4F94;
+  --b3-blue: #3600CC;
+  --b3-gray: #5C5C5C;
+  --dark-gray: #222220;
 
+  --font-family-sans-serif: 'Open Sans', sans-serif, arial, sans-serif;
+  --font-family-heading: 'Work Sans', Arial, sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 /* work-sans-regular - latin */
 
 html{
@@ -15,6 +26,10 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: 'Work Sans';
   font-weight: 800;
+}
+
+h2 {
+  font-size: 2.5rem;
 }
 
 .navbar-brand-img {
