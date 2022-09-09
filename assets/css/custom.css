@@ -6,6 +6,7 @@
   --b3-blue: #3600CC;
   --b3-gray: #5C5C5C;
   --dark-gray: #222220;
+  --muted-pink: rgba(255, 79, 148, 0.2);
 
   --font-family-sans-serif: 'Open Sans', sans-serif, arial, sans-serif;
   --font-family-heading: 'Work Sans', Arial, sans-serif;
@@ -50,5 +51,12 @@ h2 {
 
 .contact-map {
   max-height: 305px;
-  
+}
+
+.contact-city-header {
+  color: var(--muted-pink);
+  font-size: 18.75rem;
+  font-weight: 800;
+  top: calc(50% - 352px/2 - 197.5px);
+  left: 25%;
 }
