@@ -49,6 +49,20 @@ h2 {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.014) -73.98%, rgba(0, 0, 0, 0.7) 58.16%);
 }
 
+.btn-pink {
+  background-color: var(--b3-pink);
+  color: white;
+  font-family: var(--font-family-sans-serif);
+  font-weight: 800;
+  font-size: 1.4rem;
+  width: fit-content;
+}
+
+.btn-pink:hover {
+ background-color: var(--muted-pink);
+ color: white;
+}
+
 .contact-map {
   max-height: 305px;
 }
@@ -59,4 +73,28 @@ h2 {
   font-weight: 800;
   top: calc(50% - 352px/2 - 197.5px);
   left: 25%;
+}
+
+.contact-list-item {
+  color: white;
+  font-family: var(--font-family-heading);
+  font-weight: 800;
+  font-size: 2.1rem;
+  background: none;
+  border: none;
+}
+
+.contact-list-item:hover {
+  cursor: pointer;
+  color: var(--muted-pink)
+}
+
+.contact-list-item.active {
+  color: var(--b3-pink);
+  text-decoration: underline;
+  background: none;
+}
+
+.contact-career {
+  width: fit-content;
 }
