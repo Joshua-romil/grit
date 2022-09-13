@@ -33,6 +33,10 @@ h2 {
   font-size: 2.5rem;
 }
 
+.career-head{
+  text-align: center;
+}
+
 .infotext {
   text-transform: uppercase;
   font-family: var(--font-family-sans-serif);
@@ -60,3 +64,31 @@ h2 {
   top: calc(50% - 352px/2 - 197.5px);
   left: 25%;
 }
+
+.thumbnail{
+  width: 100px;
+  height: 100px;
+}
+
+.card-content{
+  text-align: center;
+}
+
+.image-stack{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  position: relative;
+}
+
+.image-stack_item-top{
+  grid-column: 1/span 8;
+  grid-row: 1;
+  padding-top: 80%;
+  z-index: 1;
+}
+
+.image-stack_item-bottom{
+  grid-column: 4/-1;
+  grid-row:1;
+}
+
