@@ -157,9 +157,14 @@
 
     <!-- Fullpage content -->
     <div class="ln-fullpage" data-navigation="true">
-
       <!--Hem-->
-      <section class="main-section ln-section d-flex min-vh-100" data-anchor="home" data-tooltip="Home" data-overlay-color="#00050e" data-overlay-opacity="50">
+      <section
+        class="main-section ln-section d-flex min-vh-100"
+        data-anchor="home"
+        data-tooltip="Home"
+        data-overlay-color="#00050e"
+        data-overlay-opacity="50"
+      >
         <div class="overlay overlay-advanced has-mobile-overlay">
           <div class="overlay-inner"></div>
         </div>
@@ -197,7 +202,13 @@
       </section>
 
       <!--Erbjudande-->
-      <section class="ln-section d-xl-flex bg-secondary" data-anchor="our-mission" data-tooltip="Our mission" data-overlay-color="#00050e" data-overlay-opacity="90">
+      <section
+        class="ln-section d-xl-flex bg-secondary"
+        data-anchor="our-mission"
+        data-tooltip="Our mission"
+        data-overlay-color="#00050e"
+        data-overlay-opacity="90"
+      >
         <div class="overlay overlay-advanced">
           <div class="overlay-inner bg-image-holder bg-cover">
             <img src="assets/images/circles-image.webp" alt="background" />
@@ -237,28 +248,54 @@
         </div>
       </section>
 
-
       <!--Karriär-->
-      <section class="ln-section d-xl-flex bg-primary" data-anchor="what-we-do" data-tooltip="What we do" data-overlay-color="#2d5aec" data-overlay-opacity="90">
-        
+      <section
+        class="ln-section d-xl-flex bg-primary"
+        data-anchor="what-we-do"
+        data-tooltip="What we do"
+        data-overlay-color="#2d5aec"
+        data-overlay-opacity="90"
+      >
         <div class="overlay overlay-advanced">
           <div class="overlay-inner bg-image-holder bg-cover">
-            <img src="assets/images/career-background-image.webp" alt="background">
+            <img
+              src="assets/images/career-background-image.webp"
+              alt="background"
+            />
           </div>
         </div>
 
         <div class="container align-self-xl-start">
-
           <div class="row mt-6">
-            
             <div class="col-md-6">
+              <h2 class="animated mb-4 career-head" data-animation="fadeInUp">
+                Karriär
+              </h2>
+              <p
+                class="animated"
+                data-animation="fadeInUp"
+                data-animation-delay="150"
+              >
+                <span
+                  >Fusce massa dolor, mattis sed ultrices ut, placerat ut leo.
+                  Donec sed fringilla lectus, non vulputate orci. Integer id
+                  libero euismod, interdum ligula vel, porttitor magna. Sed
+                  euismod maximus finibus. Pellentesque tempus ultricies nisi at
+                  cursus. Nulla at nisi tellus. Suspendisse potenti.</span
+                >
+              </p>
+              <img
+                class="animated thumbnail"
+                src="assets/images/Badge-KF-2022-image.webp"
+              />
+              <img
+                class="animated thumbnail"
+                src="assets/images/SBA-Sverige-2020-image.webp"
+              />
 
-              <h2 class="animated mb-4 career-head" data-animation="fadeInUp">Karriär</h2>
-              <p class="animated" data-animation="fadeInUp" data-animation-delay="150"><span>Fusce massa dolor, mattis sed ultrices ut, placerat ut leo. Donec sed fringilla lectus, non vulputate orci. Integer id libero euismod, interdum ligula vel, porttitor magna. Sed euismod maximus finibus. Pellentesque tempus ultricies nisi at cursus. Nulla at nisi tellus. Suspendisse potenti.</span></p>
-              <img class="animated thumbnail" src="assets/images/Badge-KF-2022-image.webp">
-              <img class="animated thumbnail" src="assets/images/SBA-Sverige-2020-image.webp">
-
-              <h3 class="animated mt-11 career-head" data-animation="fadeInUp">Lediga tjänster</h3>
+              <h3 class="animated mt-11 career-head" data-animation="fadeInUp">
+                Lediga tjänster
+              </h3>
 
               <!--1st row card deck-->
               <div class="animated card-deck">
@@ -273,7 +310,6 @@
                   <div class="card-body">
                     <h5 class="card-title">Backend-utvecklare</h5>
                     <p class="card-text">Flera platser - Hybridarbete</p>
-
                   </div>
                 </div>
 
@@ -281,7 +317,6 @@
                   <div class="card-body">
                     <h5 class="card-title">iOS-utvecklare</h5>
                     <p class="card-text">Flera platser - Hybridarbete</p>
-
                   </div>
                 </div>
               </div>
@@ -309,7 +344,8 @@
                   </div>
                 </div>
               </div>
-            </div> <!--End of col-md-7-->
+            </div>
+            <!--End of col-md-7-->
           </div>
         </div>
       </section>
@@ -493,7 +529,7 @@
 
       <!-- Kontakta oss -->
       <section
-        class="ln-section d-xl-flex bg-white"
+        class="ln-section d-xl-flex bg-white moblie-contact--padding-0"
         data-anchor="contact"
         data-tooltip="Contact"
         data-overlay-color="#00050e"
@@ -501,7 +537,7 @@
       >
         <div id="contactCarousel" class="carousel positon-relative">
           <nav
-            class="contact-nav position-absolute zindex-5 col-lg-4 mt-19 text-right d-flex justify-content-end"
+            class="contact-nav position-absolute zindex-5 col-lg-4 mt-19 text-right d-flex justify-content-end mobile-contact--nav"
           >
             <ol
               class="list-group carousel-indicators contact-list flex-direction-column justify-content-center mx-0"
@@ -554,7 +590,7 @@
             <!-- SLIDE 1 -->
             <div class="carousel-item active">
               <div
-                class="item-media overlay overlay-advanced col-lg-4 zindex-2"
+                class="item-media overlay overlay-advanced col-lg-4 zindex-2 mobile-contact--zindex-0"
               >
                 <div class="media-container">
                   <div class="overlay-inner bg-image-holder bg-cover h-100">
@@ -564,7 +600,7 @@
                 <div class="overlay-inner bg-linear"></div>
               </div>
               <h2
-                class="col-12 d-block text-left pl-18 position-absolute contact-city-header"
+                class="col-12 d-block text-left pl-18 position-absolute contact-city-header mobile-contact--title"
               >
                 Stockholm
               </h2>
@@ -578,7 +614,7 @@
                     <div class="col-12 col-lg-7 mb-4 mb-lg-0"></div>
                     <div class="row pt-lg-20 d-flex justify-content-end">
                       <div
-                        class="col-10 col-lg-4 align-self-center text-black text-right mr-0"
+                        class="col-10 col-lg-4 align-self-center text-black text-right mr-0 mobile-contact"
                       >
                         <div class="pt-lg-4">
                           <p>
@@ -601,7 +637,7 @@
                         target="_blank"
                       >
                         <img
-                          class="contact-map d-lg-inline-block"
+                          class="contact-map d-lg-inline-block .mobile-contact"
                           src="assets/images/map-sthlm.webp"
                           alt=""
                         />

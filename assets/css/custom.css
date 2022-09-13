@@ -1,4 +1,4 @@
-/* Place Your Custom Styles Here */
+﻿/* Place Your Custom Styles Here */
 :root {
   --b3-turquoise: #0ccccc;
   --b3-yellow: #f7df04;
@@ -42,7 +42,7 @@ h2 {
   font-size: 2.5rem;
 }
 
-.career-head{
+.career-head {
   text-align: center;
 }
 
@@ -91,7 +91,6 @@ h2 {
   top: calc(50% - 352px / 2 - 197.5px);
   left: 25%;
 }
-
 
 .carousel-indicators {
   display: flex !important;
@@ -170,12 +169,46 @@ h2 {
   transition: opacity 0.6s ease;
 } */
 
-.thumbnail{
+.thumbnail {
   width: 100px;
   height: 100px;
 }
 
-.card-content{
+.card-content {
   text-align: center;
 }
 
+@media (max-width: 951px) {
+  .mobile-contact {
+    display: block;
+    position: relative;
+    z-index: 5;
+  }
+
+  .moblie-contact--padding-0 {
+    padding: 0;
+  }
+
+  .mobile-contact--zindex-0 {
+    z-index: 0;
+  }
+
+  .mobile-contact--title {
+    position: relative;
+    font-size: 6.3rem;
+    width: 539px;
+    height: 117px;
+    left: 0;
+    top: calc(50% - 117px / 2 - 212.5px);
+    transform: rotate(90deg);
+    z-index: 2;
+  }
+
+  .mobile-contact--nav {
+    margin-top: 3rem !important;
+  }
+
+  .moblie-contact--nav > ol > li {
+    font-size: 1.5rem !important;
+  }
+}
