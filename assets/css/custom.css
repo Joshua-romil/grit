@@ -1,4 +1,4 @@
-﻿/* Place Your Custom Styles Here */
+/* Place Your Custom Styles Here */
 :root {
   --b3-turquoise: #0ccccc;
   --b3-yellow: #f7df04;
@@ -40,6 +40,10 @@ h6,
 
 h2 {
   font-size: 2.5rem;
+}
+
+.career-head{
+  text-align: center;
 }
 
 .infotext {
@@ -87,6 +91,7 @@ h2 {
   top: calc(50% - 352px / 2 - 197.5px);
   left: 25%;
 }
+
 
 .carousel-indicators {
   display: flex !important;
@@ -164,3 +169,13 @@ h2 {
   opacity: 0.5;
   transition: opacity 0.6s ease;
 } */
+
+.thumbnail{
+  width: 100px;
+  height: 100px;
+}
+
+.card-content{
+  text-align: center;
+}
+
