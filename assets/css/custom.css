@@ -210,7 +210,7 @@ h2 {
     left: -45%;
     top: calc(50% - 117px / 2 - 212.5px);
     transform: rotate(90deg);
-    z-index: 2;
+    z-index: 1;
     padding-left: 50% !important;
   }
 
