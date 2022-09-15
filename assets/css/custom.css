@@ -181,6 +181,11 @@ h2 {
 /* MOBILE STYLING */
 
 @media (max-width: 951px) {
+  .carousel-item {
+    height: fit-content !important;
+    padding: 3rem 0;
+  }
+
   .mobile-contact {
     display: block;
     position: relative;
@@ -218,9 +223,13 @@ h2 {
     justify-content: start !important;
   }
 
+  .portfolio-item {
+    margin-bottom: 1rem !important;
+  }
+
   .contact-career {
     color: white;
-    margin: 0 auto;
+    margin: 0 auto !important;
     text-align: center !important;
     place-items: center !important;
   }
@@ -236,7 +245,7 @@ h2 {
   }
 
   .mobile-contact--nav {
-    margin-top: 3rem !important;
+    margin-top: 2.5rem !important;
   }
 
   .moblie-contact--nav > ol > li {
