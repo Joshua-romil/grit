@@ -206,8 +206,8 @@ h2 {
     position: relative !important;
     font-size: 6.3rem;
     width: 539px;
-    height: 117px;
-    left: -45%;
+    height: 6rem;
+    left: -40%;
     top: calc(50% - 117px / 2 - 212.5px);
     transform: rotate(90deg);
     z-index: 1;
