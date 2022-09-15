@@ -178,11 +178,15 @@ h2 {
   text-align: center;
 }
 
+/* MOBILE STYLING */
+
 @media (max-width: 951px) {
   .mobile-contact {
     display: block;
     position: relative;
     z-index: 5;
+    color: white;
+    text-align: left !important;
   }
 
   .moblie-contact--padding-0 {
@@ -193,15 +197,42 @@ h2 {
     z-index: 0;
   }
 
+  .contact-list-item,
+  .carousel-indicators > li {
+    font-size: 1.37rem;
+  }
+
   .mobile-contact--title {
-    position: relative;
+    position: relative !important;
     font-size: 6.3rem;
     width: 539px;
     height: 117px;
-    left: 0;
+    left: -45%;
     top: calc(50% - 117px / 2 - 212.5px);
     transform: rotate(90deg);
     z-index: 2;
+    padding-left: 50% !important;
+  }
+
+  .mobile-contact--row {
+    justify-content: start !important;
+  }
+
+  .contact-career {
+    color: white;
+    margin: 0 auto;
+    text-align: center !important;
+    place-items: center !important;
+  }
+
+  .contact-map--link {
+    margin: 0 auto;
+    max-width: 95%;
+    padding-top: 2.5rem;
+  }
+
+  .contact-map {
+    max-width: 100%;
   }
 
   .mobile-contact--nav {
