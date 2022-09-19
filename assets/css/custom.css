@@ -235,7 +235,7 @@ h2 {
   }
 }
 
-@media (max-width: 8500px) {
+@media (max-width: 850px) {
   .mobile-contact {
     padding: 0 7.5vw;
   }
