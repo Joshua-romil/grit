@@ -146,9 +146,8 @@ h2 {
   text-align: center;
 }
 
-
 /* MOBILE STYLING */
-@media (min-width: 375px) {
+@media (max-width: 990px) {
   .carousel-item {
     height: fit-content !important;
     padding: 3rem 0;
@@ -156,7 +155,7 @@ h2 {
 
   .mobile-contact {
     display: block;
-    padding: 0 2.5vw;
+    padding: 0 8vw;
     position: relative;
     z-index: 5;
     color: white;
@@ -178,10 +177,10 @@ h2 {
 
   .mobile-contact--title {
     position: relative !important;
-    font-size: 5rem;
+    font-size: 7rem;
     width: 539px;
-    height: 1rem;
-    left: -35%;
+    height: 6rem;
+    left: -27%;
     top: calc(50% - 117px / 2 - 212.5px);
     transform: rotate(90deg);
     z-index: 1;
@@ -223,29 +222,49 @@ h2 {
   }
 }
 
-@media (min-width: 819px) {
+@media (max-width: 920px) {
   .mobile-contact {
-    padding: 0 8vw;
+    padding: 0 7.5vw;
   }
 
-  /*   .mobile-contact--nav {
-    padding: 0 13vw;
-  } */
-
   .mobile-contact--title {
-    font-size: 7rem;
-    height: 6rem;
-    left: -27%;
+    font-size: 6rem;
+    height: 1rem;
+    left: -21%;
     padding-left: 40% !important;
   }
 }
 
+@media (max-width: 8500px) {
+  .mobile-contact {
+    padding: 0 7.5vw;
+  }
 
-.changeColor a{
-  color:black !important;
+  .mobile-contact--title {
+    font-size: 6rem;
+    height: 1rem;
+    left: -24%;
+    padding-left: 50% !important;
+  }
 }
 
-.changeColorLogo{
+@media (max-width: 540px) {
+  .mobile-contact {
+    padding: 0 2.5vw;
+  }
+
+  .mobile-contact--title {
+    font-size: 5rem;
+    height: 1rem;
+    left: -35%;
+    padding-left: 70% !important;
+  }
+}
+
+.changeColor a {
+  color: black !important;
+}
+
+.changeColorLogo {
   filter: brightness(0) invert(0) !important;
 }
-
