@@ -68,7 +68,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/custom.css" />
   </head>
-  <body class="layout-boxed">
+
+  <body onload="changeColorOnLoad()" onhashchange="changeColorOnHashChange()" class="layout-boxed">
     <!-- Loader -->
     <div class="loader bg-dark">
       <div class="spinner-grow text-primary" role="status">
@@ -87,7 +88,7 @@
     >
       <!-- Brand -->
       <a class="navbar-brand" href="#">
-        <img src="assets/images/logo.png" class="navbar-brand-img" alt="" />
+        <img src="assets/images/logo.png" class="navbar-brand-img" alt="" id="grit-logo"/>
       </a>
 
       <!-- Toggler -->
@@ -113,8 +114,8 @@
           <li class="nav-item" data-menuanchor="our-mission">
             <a class="nav-link" href="#our-mission">Erbjudande</a>
           </li>
-          <li class="nav-item" data-menuanchor="what-we-do">
-            <a class="nav-link" href="#what-we-do">Karriär</a>
+          <li class="nav-item" data-menuanchor="career">
+            <a id="career-link" class="nav-link" href="#career">Karriär</a>
           </li>
           <li class="nav-item" data-menuanchor="our-solutions">
             <a class="nav-link" href="#our-solutions">Om oss</a>
@@ -123,7 +124,7 @@
             <a class="nav-link" href="#our-work">B3 Koncernen</a>
           </li>
           <li class="nav-item" data-menuanchor="contact">
-            <a class="nav-link" href="#contact">Kontakt</a>
+            <a id="contact-link" class="nav-link" href="#contact">Kontakt</a>
           </li>
         </ul>
       </div>
@@ -249,13 +250,9 @@
       </section>
 
       <!--Karriär-->
-      <section
-        class="ln-section d-xl-flex bg-primary"
-        data-anchor="what-we-do"
-        data-tooltip="What we do"
-        data-overlay-color="#2d5aec"
-        data-overlay-opacity="90"
-      >
+
+      <section id="career-page" class="ln-section d-xl-flex bg-primary" data-anchor="career" data-tooltip="career" data-overlay-color="#2d5aec" data-overlay-opacity="90">
+        
         <div class="overlay overlay-advanced">
           <div class="overlay-inner bg-image-holder bg-cover">
             <img
@@ -534,6 +531,7 @@
         data-tooltip="Contact"
         data-overlay-color="#00050e"
         data-overlay-opacity="90"
+        id="contact-page"
       >
         <div id="contactCarousel" class="carousel positon-relative">
           <nav
@@ -1216,7 +1214,7 @@
           <div class="overlay overlay-advanced">
             <div
               class="overlay-inner bg-cover"
-              style="background-image: url('assets/images/image-12.jpg')"
+              style="background-image: url('')"
             ></div>
             <div
               class="overlay-inner bg-primary opacity-70 hover-opacity-80"
@@ -1296,5 +1294,8 @@
 
     <!-- Theme JS -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/custom.js" defer></script>
   </body>
 </html>
