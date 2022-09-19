@@ -252,3 +252,9 @@ h2 {
     font-size: 1.5rem !important;
   }
 }
+
+@media (min-width: 819px) {
+  .mobile-contact {
+    padding: 40vw 0;
+  }
+}
