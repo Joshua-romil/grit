@@ -137,38 +137,6 @@ h2 {
   width: 100vw !important;
 }
 
-/* Referenskod, ska raderas! */
-
-/* .carousel-indicators {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 15;
-  display: flex;
-  justify-content: center;
-  padding-left: 0;
-  margin-right: 15%;
-  margin-left: 15%;
-  list-style: none;
-} */
-/* .carousel-indicators li {
-  box-sizing: content-box;
-  flex: 0 1 auto;
-  width: 30px;
-  height: 3px;
-  margin-right: 3px;
-  margin-left: 3px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: #fff;
-  background-clip: padding-box;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  opacity: 0.5;
-  transition: opacity 0.6s ease;
-} */
-
 .thumbnail {
   width: 100px;
   height: 100px;
@@ -179,8 +147,7 @@ h2 {
 }
 
 /* MOBILE STYLING */
-
-@media (max-width: 951px) {
+@media (min-width: 375px) {
   .carousel-item {
     height: fit-content !important;
     padding: 3rem 0;
@@ -188,6 +155,7 @@ h2 {
 
   .mobile-contact {
     display: block;
+    padding: 0 2.5vw;
     position: relative;
     z-index: 5;
     color: white;
@@ -209,14 +177,14 @@ h2 {
 
   .mobile-contact--title {
     position: relative !important;
-    font-size: 6.3rem;
+    font-size: 5rem;
     width: 539px;
-    height: 6rem;
-    left: -40%;
+    height: 1rem;
+    left: -35%;
     top: calc(50% - 117px / 2 - 212.5px);
     transform: rotate(90deg);
     z-index: 1;
-    padding-left: 50% !important;
+    padding-left: 40% !important;
   }
 
   .mobile-contact--row {
@@ -246,6 +214,7 @@ h2 {
 
   .mobile-contact--nav {
     margin-top: 2.5rem !important;
+    padding: 0 2.5vw;
   }
 
   .moblie-contact--nav > ol > li {
@@ -255,6 +224,17 @@ h2 {
 
 @media (min-width: 819px) {
   .mobile-contact {
-    padding: 40vw 0;
+    padding: 0 8vw;
+  }
+
+  /*   .mobile-contact--nav {
+    padding: 0 13vw;
+  } */
+
+  .mobile-contact--title {
+    font-size: 7rem;
+    height: 6rem;
+    left: -27%;
+    padding-left: 40% !important;
   }
 }
