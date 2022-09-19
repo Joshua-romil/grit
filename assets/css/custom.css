@@ -1,4 +1,4 @@
-/* Place Your Custom Styles Here */
+﻿/* Place Your Custom Styles Here */
 :root {
   --b3-turquoise: #0ccccc;
   --b3-yellow: #f7df04;
@@ -179,3 +179,11 @@ h2 {
   text-align: center;
 }
 
+
+.changeColor a{
+  color:black !important;
+}
+
+.changeColorLogo{
+  filter: brightness(0) invert(0) !important;
+}
