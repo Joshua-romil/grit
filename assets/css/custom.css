@@ -231,6 +231,19 @@ h2 {
   }
 }
 
+@media (max-width: 1199px){
+
+  #careerOverlay{
+    display: none;
+  }
+}
+
+@media (max-width: 992px){
+  #careerOverlay{
+    display: none;
+  }
+}
+
 @media (max-width: 920px) {
   .mobile-contact {
     padding: 0 7.5vw;
@@ -314,6 +327,10 @@ h2 {
     width: 23px;
     height: 23px;
   }
+  #careerOverlay{
+    display: none;
+  }
+
 }
 
 @media (max-width: 850px) {
@@ -335,6 +352,11 @@ h2 {
     align-items: baseline;
     justify-content: space-around;
   }
+
+  #careerOverlay{
+    display: none;
+  }
+
 }
 
 @media (max-width: 542px) {
@@ -383,6 +405,9 @@ h2 {
   .nav-item--colorblock,
   .mobile-nav--socials,
   .mobile-nav--contacts {
+
+  #careerOverlay{
+
     display: none;
   }
 }
@@ -393,4 +418,8 @@ h2 {
 
 .changeColorLogo {
   filter: brightness(0) invert(0) !important;
+}
+
+.bg-primary{
+  background-color: #fff !important;
 }
