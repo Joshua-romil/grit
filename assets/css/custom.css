@@ -405,6 +405,8 @@ h2 {
   .nav-item--colorblock,
   .mobile-nav--socials,
   .mobile-nav--contacts {
+    display: none;
+  }
 
   #careerOverlay{
 
