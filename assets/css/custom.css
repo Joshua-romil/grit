@@ -15,9 +15,6 @@
 }
 /* work-sans-regular - latin */
 
-html {
-}
-
 body {
   font-family: "Open Sans";
 }
@@ -222,6 +219,19 @@ h2 {
   }
 }
 
+@media (max-width: 1199px){
+
+  #careerOverlay{
+    display: none;
+  }
+}
+
+@media (max-width: 992px){
+  #careerOverlay{
+    display: none;
+  }
+}
+
 @media (max-width: 920px) {
   .mobile-contact {
     padding: 0 7.5vw;
@@ -233,6 +243,11 @@ h2 {
     left: -21%;
     padding-left: 40% !important;
   }
+
+  #careerOverlay{
+    display: none;
+  }
+
 }
 
 @media (max-width: 850px) {
@@ -246,6 +261,11 @@ h2 {
     left: -24%;
     padding-left: 50% !important;
   }
+
+  #careerOverlay{
+    display: none;
+  }
+
 }
 
 @media (max-width: 540px) {
@@ -259,6 +279,10 @@ h2 {
     left: -35%;
     padding-left: 70% !important;
   }
+
+  #careerOverlay{
+    display: none;
+  }
 }
 
 .changeColor a {
@@ -267,4 +291,8 @@ h2 {
 
 .changeColorLogo {
   filter: brightness(0) invert(0) !important;
+}
+
+.bg-primary{
+  background-color: #fff !important;
 }
