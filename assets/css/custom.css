@@ -156,7 +156,7 @@ h2 {
 }
 
 /* MOBILE STYLING */
-@media (max-width: 990px) {
+@media (max-width: 991px) {
   .carousel-item {
     height: fit-content !important;
     padding: 3rem 0;
@@ -231,13 +231,13 @@ h2 {
   }
 }
 
-@media(max-width:1199px){
-  #careerOverlay{
-    display: none;
+@media screen and (min-width:992px) and (max-width: 1199px){
+  .contact-map {
+    max-height: 245px;
   }
 }
 
-@media (max-width: 992px){
+@media(max-width:1199px){
   #careerOverlay{
     display: none;
   }
@@ -326,10 +326,7 @@ h2 {
     width: 23px;
     height: 23px;
   }
-  #careerOverlay{
-    display: none;
-  }
-
+  
 }
 
 @media (max-width: 850px) {
@@ -352,9 +349,6 @@ h2 {
     justify-content: space-around;
   }
 
-  #careerOverlay{
-    display: none;
-  }
 
 }
 
@@ -419,4 +413,10 @@ h2 {
 
 .bg-primary{
   background-color: #fff !important;
+}
+
+
+#contact-page{
+  padding-bottom: 0rem !important;
+  padding-top: 0rem !important;
 }
