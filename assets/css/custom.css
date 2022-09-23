@@ -434,3 +434,19 @@ h2 {
   padding-bottom: 0rem !important;
   padding-top: 0rem !important;
 }
+
+
+/*Special case: Användaren har öppnat hamburgarmenyn och är positionerad högst upp*/
+.navbar-toggled-show.scrolled-0 .navbar-brand-img{
+  filter: brightness(0) invert(0) !important;
+}
+
+/*Användaren har öppnat hamburgarmenyn och har börjat scrolla*/
+/*Möjligtvis redundant då man bör kunna avaktivera scroll när man öppnat upp hamburgarmenyn*/
+.navbar-toggled-show.scrolled .navbar-brand-img{
+  filter: brightness(0) invert(0) !important;
+}
+
+.navbar.scrolled .navbar-brand-img{
+  filter: brightness(0) invert(0) !important;
+}

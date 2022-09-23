@@ -9,6 +9,7 @@ function changeColorOnHashChange() {
     logo.classList.add("changeColorLogo");
   } else if (location.hash == "#contact") {
     nav.classList.add("changeColor");
+    logo.classList.remove("changeColorLogo");
   } else {
     nav.classList.remove("changeColor");
     logo.classList.remove("changeColorLogo");
