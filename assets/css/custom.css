@@ -89,6 +89,22 @@ h2 {
   color: white;
 }
 
+.corpo-title {
+  font-size: 3.5rem;
+  z-index: 2;
+}
+
+.title-colorblock {
+  display: block;
+  position: absolute;
+  width: 35px;
+  height: 100%;
+  left: -1rem;
+  z-index: -1;
+  padding: 8px 0;
+  place-self: center;
+}
+
 .contact-map {
   max-height: 305px;
 }
@@ -231,14 +247,14 @@ h2 {
   }
 }
 
-@media screen and (min-width:992px) and (max-width: 1199px){
+@media screen and (min-width: 992px) and (max-width: 1199px) {
   .contact-map {
     max-height: 245px;
   }
 }
 
-@media(max-width:1199px){
-  #careerOverlay{
+@media (max-width: 1199px) {
+  #careerOverlay {
     display: none;
   }
 }
@@ -326,7 +342,9 @@ h2 {
     width: 23px;
     height: 23px;
   }
-  
+  #careerOverlay {
+    display: none;
+  }
 }
 
 @media (max-width: 850px) {
@@ -348,8 +366,6 @@ h2 {
     align-items: baseline;
     justify-content: space-around;
   }
-
-
 }
 
 @media (max-width: 542px) {
@@ -400,7 +416,6 @@ h2 {
   .mobile-nav--contacts {
     display: none;
   }
-
 }
 
 .changeColor a {
@@ -411,12 +426,11 @@ h2 {
   filter: brightness(0) invert(0) !important;
 }
 
-.bg-primary{
+.bg-primary {
   background-color: #fff !important;
 }
 
-
-#contact-page{
+#contact-page {
   padding-bottom: 0rem !important;
   padding-top: 0rem !important;
 }
