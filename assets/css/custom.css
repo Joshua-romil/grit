@@ -285,6 +285,38 @@ a:hover {
   #careerOverlay {
     display: none;
   }
+
+  .corpo-zebra {
+    max-height: 150px;
+    width: 100vw;
+    top: 0;
+  }
+
+  .corpo-title {
+    font-size: 1.8rem;
+  }
+
+  .corpo-img {
+    max-width: 45vw;
+    left: 0;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .title-colorblock {
+    width: 15px;
+    left: -0.3rem;
+  }
+
+  .mobile-corpo {
+    padding-bottom: 0px;
+  }
+
+  .mobile-corpo--container > .row {
+    width: fit-content;
+    display: inline-block;
+  }
 }
 
 @media (max-width: 920px) {
@@ -394,6 +426,9 @@ a:hover {
     align-items: baseline;
     justify-content: space-around;
   }
+  .corpo-img {
+    max-width: 100vw;
+  }
 }
 
 @media (max-width: 542px) {
@@ -463,18 +498,17 @@ a:hover {
   padding-top: 0rem !important;
 }
 
-
 /*Special case: Användaren har öppnat hamburgarmenyn och är positionerad högst upp*/
-.navbar-toggled-show.scrolled-0 .navbar-brand-img{
+.navbar-toggled-show.scrolled-0 .navbar-brand-img {
   filter: brightness(0) invert(0) !important;
 }
 
 /*Användaren har öppnat hamburgarmenyn och har börjat scrolla*/
 /*Möjligtvis redundant då man bör kunna avaktivera scroll när man öppnat upp hamburgarmenyn*/
-.navbar-toggled-show.scrolled .navbar-brand-img{
+.navbar-toggled-show.scrolled .navbar-brand-img {
   filter: brightness(0) invert(0) !important;
 }
 
-.navbar.scrolled .navbar-brand-img{
+.navbar.scrolled .navbar-brand-img {
   filter: brightness(0) invert(0) !important;
 }
