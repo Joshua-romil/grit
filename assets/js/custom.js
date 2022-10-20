@@ -1,5 +1,6 @@
 const nav = document.querySelector("nav");
 const logo = document.getElementById("grit-logo");
+const socialIcons = document.getElementById("navSocialIcons");
 let dropArea = document.getElementById('drop-area')
 
 
@@ -8,13 +9,16 @@ let dropArea = document.getElementById('drop-area')
 function changeColorOnHashChange() {
   if (location.hash == "#career" || location.hash == "#our-work") {
     nav.classList.add("changeColor");
+    socialIcons.classList.add("changeColor")
     logo.classList.add("changeColorLogo");
   } else if (location.hash == "#contact") {
     nav.classList.add("changeColor");
     logo.classList.remove("changeColorLogo");
+    socialIcons.classList.remove("changeColor")
   } else {
     nav.classList.remove("changeColor");
     logo.classList.remove("changeColorLogo");
+    socialIcons.classList.remove("changeColor")
   }
 }
 
@@ -23,6 +27,7 @@ function changeColorOnHashChange() {
 function changeColorOnLoad() {
   if (location.hash == "#career" || location.hash == "#our-work") {
     nav.classList.add("changeColor");
+    socialIcons.classList.add("changeColor")
     logo.classList.add("changeColorLogo");
   } else if (location.hash == "#contact") {
     nav.classList.add("changeColor");
