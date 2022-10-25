@@ -53,34 +53,6 @@ License: https://themeforest.net/licenses/standard
     return Math.max($(window).height(), window.innerHeight );
   }
 
-  // System Detector
-  function ln_systemDetector() {
-
-    var isMobile = {
-      Android: function() {
-        return navigator.userAgent.match(/Android/i);
-      },
-      BlackBerry: function() {
-        return navigator.userAgent.match(/BlackBerry/i);
-      },
-      iOS: function() {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-      },
-      Opera: function() {
-        return navigator.userAgent.match(/Opera Mini/i);
-      },
-      Windows: function() {
-        return navigator.userAgent.match(/IEMobile/i);
-      },
-      any: function() {
-        return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
-      }
-    };
-
-    trueMobile = isMobile.any();
-
-  }
-
   function ln_screenDetector() {
     if( getWindowWidth() >= 1200 && getWindowHeight() >= 768 ){
       $body.removeClass('layout-mobile');
@@ -180,10 +152,7 @@ License: https://themeforest.net/licenses/standard
 
               // Set Section UI Scheme
               var uiScheme = $('.ln-section').eq( nextIndex - 1 ).attr('data-ui');
-              ln_setSectionScheme(uiScheme);
-
-              // Scroll progress
-              ln_scrollProgress(nextIndex);
+  
             },
             afterLoad: function(anchorLink, index){
               if(index == 1){
@@ -233,7 +202,6 @@ License: https://themeforest.net/licenses/standard
 
               // Set Section UI Scheme
               var uiScheme = $('.ln-section').eq( 0 ).attr('data-ui');
-              ln_setSectionScheme(uiScheme);
             }
           });
         }
@@ -250,35 +218,6 @@ License: https://themeforest.net/licenses/standard
       $body.removeClass('ln-fullpage-active ln-fullpage-intro-active ui-light ui-dark');
       $('.ln-section').removeClass('is-scrollable');
       ln_animations();
-    }
-  }
-
-  // [3. Set Section Scheme]
-  function ln_setSectionScheme(uiScheme) {
-    if( uiScheme === 'light' ){
-      $body.removeClass('ui-dark').addClass('ui-light');
-    } else if( uiScheme === 'dark' ){
-      $body.removeClass('ui-light').addClass('ui-dark');
-    } else {
-      $body.removeClass('ui-dark ui-light');
-    }
-  }
-
-  // [4. Scroll progress]
-  function ln_scrollProgress(nextIndex) {
-    if( getWindowWidth() >= 1200 ){
-      if( nextIndex === 'none' && !$body.hasClass('ln-fullpage-active') ){
-        var scvp = $(window).scrollTop(),
-		  dh = $(document).height();
-      } else {
-        var scvp = getWindowHeight() * (nextIndex - 1),
-		  dh = $('.ln-section').length * getWindowHeight();
-      }
-
-      var wh = $(window).height(),
-        scrollPercent = (scvp / (dh-wh)) * 100,
-        position = scrollPercent;
-      $('.scroll-progress .progress').css('height', position + '%');
     }
   }
 
@@ -454,42 +393,6 @@ License: https://themeforest.net/licenses/standard
     nav_event_old = nav_event;
   }
 
-  // [6. Back to top]
-  function ln_backToTop() {
-    var scrollpos = $(window).scrollTop();
-
-    if( !$body.hasClass('ln-fullpage-active') ){
-      if( getWindowWidth() >= 576 ){
-        if ( scrollpos > 100 ) {
-          $backtotop.addClass('active');
-        } else {
-          $backtotop.removeClass('active');
-        }
-      } else {
-        $backtotop.removeClass('active');
-      }
-    }
-
-    $backtotop.off('click');
-    $backtotop.on('click', function(e) {
-      e.preventDefault();
-
-      if($body.hasClass('ln-fullpage-active')){
-          $.fn.fullpage.moveTo(1);
-      } else {
-        var target = $(this).attr('href');
-
-        $.smoothScroll({
-          offset: 0,
-          easing: 'swing',
-          speed: 800,
-          scrollTarget: target,
-          preventDefault: false
-        });
-      }
-    });
-  }
-
   // [7. Backgrounds]
   function ln_backgrounds(){
 
@@ -503,56 +406,6 @@ License: https://themeforest.net/licenses/standard
         $self.css('background-image','url('+src+')').children('img').hide();
       });
     }
-
-    // Global overlay animation
-    // Add a background color and a opacity to the overlays in the sections that has use a animated backgrounds on scroll
-    if($('.overlay-global').length > 0){
-      $('.ln-section').each(function(){
-        var element = $(this),
-          sectionOverlayOpacity = parseInt(element.attr('data-overlay-opacity'), 10),
-          sectionOverlayColor = element.attr('data-overlay-color');
-
-        if(sectionOverlayColor){
-          element.find('.overlay.has-mobile-overlay .overlay-inner').css('background-color', sectionOverlayColor);
-        }
-
-        if(sectionOverlayOpacity){
-          element.find('.overlay.has-mobile-overlay .overlay-inner').css('opacity', sectionOverlayOpacity/100);
-        }
-      });
-    }
-
-    // Video Background
-    if( $body.hasClass('mobile') ){
-      $('.video-wrapper').css('display', 'none');
-    }
-
-    // Granim
-    $('[data-gradient-bg]').each( function( index, element ){
-      var granimParent = $(this),
-        granimID = 'granim-'+index+'',
-        colours = granimParent.attr('data-gradient-bg'),
-        colours = colours.replace(' ',''),
-        colours = colours.replace(/'/g, '"')
-        colours = JSON.parse( colours );
-
-      // Add canvas
-      granimParent.prepend('<canvas id="'+granimID+'"></canvas>');
-
-      var granimInstance = new Granim({
-        element: '#'+granimID,
-        name: 'basic-gradient',
-        direction: 'left-right', // 'diagonal', 'top-bottom', 'radial'
-        opacity: [1, 1],
-        isPausedWhenNotInView: true,
-        states : {
-          "default-state": {
-            gradients: colours
-          }
-        }
-      });
-    });
-
   }
 
   // [8. Animations]
@@ -583,173 +436,6 @@ License: https://themeforest.net/licenses/standard
       });
     });
 
-  }
-
-  // [9. Countdown]
-  function ln_countdown(){
-    var countdown = $('.countdown[data-countdown]');
-
-    if (countdown.length > 0) {
-      countdown.each(function() {
-        var $countdown = $(this),
-          finalDate = $countdown.data('countdown');
-        $countdown.countdown(finalDate, function(event) {
-          $countdown.html(event.strftime(
-            '<div class="countdown-container row"><div class="col-6 col-sm-auto"><div class="countdown-item"><div class="number">%-D</div><span class="title">Day%!d</span></div></div><div class="col-6 col-sm-auto"><div class="countdown-item"><div class="number">%H</div><span class="title">Hours</span></div></div><div class="col-6 col-sm-auto"><div class="countdown-item"><div class="number">%M</div><span class="title">Minutes</span></div></div><div class="col-6 col-sm-auto"><div class="countdown-item"><div class="number">%S</div><span class="title">Seconds</span></div></div></div>'
-          ));
-        });
-      });
-    }
-  }
-
-  // [10. Magnific Popup]
-  function ln_magnificPopup() {
-    if( document.querySelectorAll('.mfp-image').length > 0 ||
-      document.querySelectorAll('.mfp-gallery').length > 0 ||
-      document.querySelectorAll('.mfp-iframe').length > 0 ||
-      document.querySelectorAll('.mfp-ajax').length > 0 ||
-      document.querySelectorAll('.open-popup-link').length > 0 ){
-
-      if(!$().magnificPopup) {
-        console.log('MagnificPopup: magnificPopup not defined.');
-        return true;
-      }
-
-      $('.mfp-image').magnificPopup({
-        type:'image',
-        closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i class="ion-android-close"></i></button>',
-        removalDelay: 300,
-        mainClass: 'mfp-fade'
-      });
-
-      $('.mfp-gallery').each(function() {
-        $(this).magnificPopup({
-          delegate: 'a',
-          type: 'image',
-          gallery: {
-            enabled: true
-          },
-          arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
-          closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i class="ion-android-close"></i></button>',
-          removalDelay: 300,
-          mainClass: 'mfp-fade'
-        });
-      });
-
-      $('.mfp-iframe').magnificPopup({
-        type: 'iframe',
-        iframe: {
-          patterns: {
-            youtube: {
-              index: 'youtube.com/',
-              id: 'v=',
-              src: '//www.youtube.com/embed/%id%?autoplay=1'
-            },
-            vimeo: {
-              index: 'vimeo.com/',
-              id: '/',
-              src: '//player.vimeo.com/video/%id%?autoplay=1'
-            },
-            gmaps: {
-              index: '//maps.google.',
-              src: '%id%&output=embed'
-            }
-          },
-          srcAction: 'iframe_src'
-        },
-        closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i class="ion-android-close"></i></button>',
-        removalDelay: 300,
-        mainClass: 'mfp-fade'
-      });
-
-      $('.mfp-ajax').magnificPopup({
-        type: 'ajax',
-        ajax: {
-          settings: null,
-          cursor: 'mfp-ajax-cur',
-          tError: '<a href="%url%">The content</a> could not be loaded.'
-        },
-        midClick: true,
-        closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i class="ion-android-close"></i></button>',
-        removalDelay: 300,
-        mainClass: 'mfp-fade',
-        callbacks: {
-          ajaxContentAdded: function(mfpResponse) {
-           ln_Slider();
-          }
-        }
-      });
-
-      $('.open-popup-link').magnificPopup({
-        type: 'inline',
-        midClick: true,
-        closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i class="ion-android-close"></i></button>',
-        removalDelay: 300,
-        mainClass: 'mfp-zoom-in'
-      });
-
-      $('.popup-modal-dismiss').on('click', function (e) {
-        e.preventDefault();
-        $.magnificPopup.close();
-      });
-
-    }
-  }
-
-  // [11. Slider]
-  function ln_slider() {
-    var slider = $('.slider');
-
-    if(slider.length > 0){
-      if( getWindowWidth() >= 992 && getWindowHeight() >= 768 ){
-        if( !slider.hasClass('slick-initialized') ){
-          slider.slick({
-            slidesToShow: 1,
-            infinite: true,
-            nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
-            prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>'
-          });
-        }
-      } else {
-        if( slider.hasClass('slick-initialized') ){
-          slider.slick('unslick');
-        }
-      }
-    }
-  }
-
-  // [12. Subscribe Form]
-  function ln_subscribeForm(){
-    var $subscribeForm = $('.subscribe-form');
-
-    if ( $subscribeForm.length > 0 ){
-      $subscribeForm.each( function(){
-        var el = $(this),
-          elResult = el.find('.subscribe-form-result');
-
-        el.find('form').validate({
-          submitHandler: function(form) {
-            elResult.fadeOut( 500 );
-
-            $(form).ajaxSubmit({
-              target: elResult,
-              dataType: 'json',
-              resetForm: true,
-              success: function( data ) {
-                elResult.html( data.message ).fadeIn( 500 );
-                if( data.alert != 'error' ) {
-                  $(form).clearForm();
-                  setTimeout(function(){
-                    elResult.fadeOut( 500 );
-                  }, 5000);
-                };
-              }
-            });
-          }
-        });
-
-      });
-    }
   }
 
   // [13. Contact Form]
@@ -785,27 +471,13 @@ License: https://themeforest.net/licenses/standard
     }
   }
 
-  // [14. Bootstrap]
-  function ln_bootstrap() {
-
-    // Botostrap Tootltips
-    $('[data-toggle="tooltip"]').tooltip();
-
-    // Bootstrap Popovers
-    $('[data-toggle="popover"]').popover();
-
-  }
 
   $(document).ready(function($){
     $('html, body').scrollTop(0);
     ln_screenDetector();
-	ln_slider();
 	ln_fullpage();
 	ln_navigation();
 	ln_backgrounds();
-    ln_magnificPopup();
-    ln_countdown();
-    ln_subscribeForm();
     ln_contactForm();
   });
 
@@ -815,17 +487,12 @@ License: https://themeforest.net/licenses/standard
 
   $(window).on('resize', function(){
     ln_screenDetector();
-    ln_slider();
 	ln_navigation();
     ln_navigationResize();
     ln_fullpage();
-    ln_scrollProgress('none');
-    ln_backToTop();
   });
 
   $(window).on('scroll', function(){
-    ln_scrollProgress('none');
-    ln_backToTop();
     ln_navigationOnScroll();
   });
 
