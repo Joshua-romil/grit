@@ -458,7 +458,6 @@ a:hover {
 
 @media (max-height: 740px) {
   .navbar-collapse {
-    height: 87vh;
     display: flex;
     flex-flow: column nowrap;
     align-items: baseline;
