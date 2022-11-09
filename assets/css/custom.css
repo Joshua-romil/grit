@@ -107,6 +107,7 @@ a:hover {
 .corpo-zebra {
   max-height: 90vh;
   right: 0;
+  bottom: 0;
   margin-right: 80px;
 }
 
@@ -294,6 +295,7 @@ a:hover {
     max-height: 150px;
     width: 100vw;
     top: 0;
+    margin-right: 0;
   }
 
   .corpo-title {
