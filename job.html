@@ -239,7 +239,7 @@
               <h1>Ansök direkt</h1>
 
               <div class="contact-form mt-4">
-                <form class="mb-0" id="cf" name="cf" action="include/sendemail.php" method="post" autocomplete="off">
+                <!-- <form class="mb-0" id="cf" name="cf" action="include/sendemail.php" method="post" autocomplete="off">
                   <div class="form-row">
 
                     <div class="col-12">
@@ -324,13 +324,6 @@
                     <div class="col-12 mt-7">
                       <button class="submit-button btn-lg" type="submit" id="cf-submit" name="cf-submit">Skicka ansökan</button>
                     </div>
-                    
-
-                    <!-- <div class="col-12 mb-4">
-                      <div class="form-group">
-                        <textarea name="cf-message" id="cf-message" placeholder="Here goes your message" class="form-control required" rows="7"></textarea>
-                      </div>
-                    </div> -->
 
                     <div class="col-12 d-none">
                       <input type="text" id="cf-botcheck" name="cf-botcheck" value="">
@@ -339,6 +332,27 @@
                     <input type="hidden" name="prefix" value="cf-">
 
                   </div>
+                </form> -->
+
+                <form name="contact" method="POST" data-netlify="true">
+                  <p>
+                    <label>Your Name: <input type="text" name="name" /></label>
+                  </p>
+                  <p>
+                    <label>Your Email: <input type="email" name="email" /></label>
+                  </p>
+                  <p>
+                    <label>Your Role: <select name="role[]" multiple>
+                      <option value="leader">Leader</option>
+                      <option value="follower">Follower</option>
+                    </select></label>
+                  </p>
+                  <p>
+                    <label>Message: <textarea name="message"></textarea></label>
+                  </p>
+                  <p>
+                    <button type="submit">Send</button>
+                  </p>
                 </form>
                 <div class="contact-form-result"></div>
               </div>
